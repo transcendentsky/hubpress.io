@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="#####Multiprocess and SubprocessThe subprocess module lets you run and control other programs. Anything you can start with the command line on the computer, can be run and controlled with this module.">
+<meta name="description" content="Multiprocess and SubprocessThe subprocess module lets you run and control other programs. Anything you can start with the command line on the computer, can be run and controlled with this module. Use">
 <meta name="keywords" content="programme">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Multiprocess and Subprocess and threading">
+<meta property="og:title" content="【Python】Multiprocess and Subprocess and threading">
 <meta property="og:url" content="http://transcendentsky.github.com/2018/06/28/test/index.html">
 <meta property="og:site_name" content="全意&#39;s Blog">
-<meta property="og:description" content="#####Multiprocess and SubprocessThe subprocess module lets you run and control other programs. Anything you can start with the command line on the computer, can be run and controlled with this module.">
+<meta property="og:description" content="Multiprocess and SubprocessThe subprocess module lets you run and control other programs. Anything you can start with the command line on the computer, can be run and controlled with this module. Use">
 <meta property="og:locale" content="cn/en/jp">
-<meta property="og:updated_time" content="2018-06-28T12:54:32.773Z">
+<meta property="og:updated_time" content="2018-06-28T12:57:25.602Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Multiprocess and Subprocess and threading">
-<meta name="twitter:description" content="#####Multiprocess and SubprocessThe subprocess module lets you run and control other programs. Anything you can start with the command line on the computer, can be run and controlled with this module.">
+<meta name="twitter:title" content="【Python】Multiprocess and Subprocess and threading">
+<meta name="twitter:description" content="Multiprocess and SubprocessThe subprocess module lets you run and control other programs. Anything you can start with the command line on the computer, can be run and controlled with this module. Use">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title>Multiprocess and Subprocess and threading | 全意's Blog</title>
+  <title>【Python】Multiprocess and Subprocess and threading | 全意's Blog</title>
   
 
 
@@ -250,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Multiprocess and Subprocess and threading</h1>
+          <h1 class="post-title" itemprop="name headline">【Python】Multiprocess and Subprocess and threading</h1>
         
 
         <div class="post-meta">
@@ -300,9 +300,9 @@
       
 
       
-        <p>#####Multiprocess and Subprocess<br>The <code>subprocess</code> module lets you run and control other programs. Anything you can start with the command line on the computer, can be run and controlled with this module. Use this to integrate external programs into your Python code.</p>
+        <h3 id="Multiprocess-and-Subprocess"><a href="#Multiprocess-and-Subprocess" class="headerlink" title="Multiprocess and Subprocess"></a>Multiprocess and Subprocess</h3><p>The <code>subprocess</code> module lets you run and control other programs. Anything you can start with the command line on the computer, can be run and controlled with this module. Use this to integrate external programs into your Python code.</p>
 <p>The <code>multiprocessing</code> module lets you divide tasks written in python over multiple processes to help improve performance. It provides an API very similar to the<code>threading</code> module; it provides methods to share data across the processes it creates, and makes the task of managing multiple processes to run Python code (much) easier. In other words, <code>multiprocessing</code> lets you take advantage of multiple processes to get your tasks done faster by executing code in parallel.</p>
-<p>#####Mlutiprocess and threading<br>[摘自 莫烦python]<br>这次我们来看看为什么说 python 的多线程 threading 有时候并不是特别理想. 最主要的原因是就是, Python 的设计上, 有一个必要的环节, 就是 Global Interpreter Lock (GIL). 这个东西让 Python 还是一次性只能处理一个东西.</p>
+<h3 id="Mlutiprocess-and-threading"><a href="#Mlutiprocess-and-threading" class="headerlink" title="Mlutiprocess and threading"></a>Mlutiprocess and threading</h3><p>[摘自 莫烦python]<br>这次我们来看看为什么说 python 的多线程 threading 有时候并不是特别理想. 最主要的原因是就是, Python 的设计上, 有一个必要的环节, 就是 Global Interpreter Lock (GIL). 这个东西让 Python 还是一次性只能处理一个东西.</p>
 <p>我从这里摘抄了一段对于 GIL 的解释.</p>
 <p>尽管Python完全支持多线程编程， 但是解释器的C语言实现部分在完全并行执行时并不是线程安全的。 实际上，解释器被一个全局解释器锁保护着，它确保任何时候都只有一个Python线程执行。 GIL最大的问题就是Python的多线程程序并不能利用多核CPU的优势 （比如一个使用了多个线程的计算密集型程序只会在一个单CPU上面运行）。</p>
 <p>在讨论普通的GIL之前，有一点要强调的是GIL只会影响到那些严重依赖CPU的程序（比如计算型的）。 如果你的程序大部分只会涉及到I/O，比如网络交互，那么使用多线程就很合适， 因为它们大部分时间都在等待。实际上，你完全可以放心的创建几千个Python线程， 现代操作系统运行这么多线程没有任何压力，没啥可担心的。</p>
@@ -398,8 +398,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -450,6 +459,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Multiprocess-and-Subprocess"><span class="nav-number">1.</span> <span class="nav-text">Multiprocess and Subprocess</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mlutiprocess-and-threading"><span class="nav-number">2.</span> <span class="nav-text">Mlutiprocess and threading</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
