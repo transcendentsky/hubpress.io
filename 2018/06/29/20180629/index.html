@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Multiprocess and SubprocessThe subprocess module lets you run and control other programs. Anything you can start with the command line on the computer, can be run and controlled with this module. Use">
+<meta name="description" content="导出入python requirements.txt文件pip freeze &amp;gt; requirements.txtpip install -r requirements.txt 安装 Linux 命令$() 用来传递参数， 如：rm $(find -name &amp;quot;*.so&amp;quot;) 而管道 | 则是把前一个输出作为后面处理的对象如:  ps -a | grep python vi">
 <meta name="keywords" content="programme">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【Python】Multiprocess and Subprocess and threading">
-<meta property="og:url" content="http://transcendentsky.github.com/2018/06/28/test/index.html">
+<meta property="og:title" content="20180629笔记">
+<meta property="og:url" content="http://transcendentsky.github.com/2018/06/29/20180629/index.html">
 <meta property="og:site_name" content="全意&#39;s Blog">
-<meta property="og:description" content="Multiprocess and SubprocessThe subprocess module lets you run and control other programs. Anything you can start with the command line on the computer, can be run and controlled with this module. Use">
+<meta property="og:description" content="导出入python requirements.txt文件pip freeze &amp;gt; requirements.txtpip install -r requirements.txt 安装 Linux 命令$() 用来传递参数， 如：rm $(find -name &amp;quot;*.so&amp;quot;) 而管道 | 则是把前一个输出作为后面处理的对象如:  ps -a | grep python vi">
 <meta property="og:locale" content="cn/en/jp">
-<meta property="og:updated_time" content="2018-06-28T12:57:25.602Z">
+<meta property="og:updated_time" content="2018-06-29T11:20:57.493Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【Python】Multiprocess and Subprocess and threading">
-<meta name="twitter:description" content="Multiprocess and SubprocessThe subprocess module lets you run and control other programs. Anything you can start with the command line on the computer, can be run and controlled with this module. Use">
+<meta name="twitter:title" content="20180629笔记">
+<meta name="twitter:description" content="导出入python requirements.txt文件pip freeze &amp;gt; requirements.txtpip install -r requirements.txt 安装 Linux 命令$() 用来传递参数， 如：rm $(find -name &amp;quot;*.so&amp;quot;) 而管道 | 则是把前一个输出作为后面处理的对象如:  ps -a | grep python vi">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://transcendentsky.github.com/2018/06/28/test/"/>
+  <link rel="canonical" href="http://transcendentsky.github.com/2018/06/29/20180629/"/>
 
 
 
 
 
-  <title>【Python】Multiprocess and Subprocess and threading | 全意's Blog</title>
+  <title>20180629笔记 | 全意's Blog</title>
   
 
 
@@ -233,7 +233,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://transcendentsky.github.com/2018/06/28/test/">
+    <link itemprop="mainEntityOfPage" href="http://transcendentsky.github.com/2018/06/29/20180629/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Trans">
@@ -250,7 +250,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【Python】Multiprocess and Subprocess and threading</h1>
+          <h1 class="post-title" itemprop="name headline">20180629笔记</h1>
         
 
         <div class="post-meta">
@@ -262,8 +262,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-28T19:41:08+08:00">
-                2018-06-28
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-29T19:06:09+08:00">
+                2018-06-29
               </time>
             
 
@@ -300,14 +300,10 @@
       
 
       
-        <h3 id="Multiprocess-and-Subprocess"><a href="#Multiprocess-and-Subprocess" class="headerlink" title="Multiprocess and Subprocess"></a>Multiprocess and Subprocess</h3><p>The <code>subprocess</code> module lets you run and control other programs. Anything you can start with the command line on the computer, can be run and controlled with this module. Use this to integrate external programs into your Python code.</p>
-<p>The <code>multiprocessing</code> module lets you divide tasks written in python over multiple processes to help improve performance. It provides an API very similar to the<code>threading</code> module; it provides methods to share data across the processes it creates, and makes the task of managing multiple processes to run Python code (much) easier. In other words, <code>multiprocessing</code> lets you take advantage of multiple processes to get your tasks done faster by executing code in parallel.</p>
-<h3 id="Mlutiprocess-and-threading"><a href="#Mlutiprocess-and-threading" class="headerlink" title="Mlutiprocess and threading"></a>Mlutiprocess and threading</h3><p>[摘自 莫烦python]<br>这次我们来看看为什么说 python 的多线程 threading 有时候并不是特别理想. 最主要的原因是就是, Python 的设计上, 有一个必要的环节, 就是 Global Interpreter Lock (GIL). 这个东西让 Python 还是一次性只能处理一个东西.</p>
-<p>我从这里摘抄了一段对于 GIL 的解释.</p>
-<p>尽管Python完全支持多线程编程， 但是解释器的C语言实现部分在完全并行执行时并不是线程安全的。 实际上，解释器被一个全局解释器锁保护着，它确保任何时候都只有一个Python线程执行。 GIL最大的问题就是Python的多线程程序并不能利用多核CPU的优势 （比如一个使用了多个线程的计算密集型程序只会在一个单CPU上面运行）。</p>
-<p>在讨论普通的GIL之前，有一点要强调的是GIL只会影响到那些严重依赖CPU的程序（比如计算型的）。 如果你的程序大部分只会涉及到I/O，比如网络交互，那么使用多线程就很合适， 因为它们大部分时间都在等待。实际上，你完全可以放心的创建几千个Python线程， 现代操作系统运行这么多线程没有任何压力，没啥可担心的。</p>
-<p>线程间通信<br>问题<br>你的程序中有多个线程，你需要在这些线程之间安全地交换信息或数据</p>
-<p>解决方案<br>从一个线程向另一个线程发送数据最安全的方式可能就是使用 queue 库中的队列了。创建一个被多个线程共享的 Queue 对象，这些线程通过使用 put() 和 get() 操作来向队列中添加或者删除元素。</p>
+        <h3 id="导出入python-requirements-txt文件"><a href="#导出入python-requirements-txt文件" class="headerlink" title="导出入python requirements.txt文件"></a>导出入python requirements.txt文件</h3><p>pip freeze &gt; requirements.txt<br>pip install -r requirements.txt 安装</p>
+<h3 id="Linux-命令"><a href="#Linux-命令" class="headerlink" title="Linux 命令"></a>Linux 命令</h3><p>$() 用来传递参数， 如：<br><code>rm $(find -name &quot;*.so&quot;)</code></p>
+<p>而管道 | 则是把前一个输出作为后面处理的对象<br>如:  <code>ps -a | grep python</code></p>
+<h3 id="vim的一些操作"><a href="#vim的一些操作" class="headerlink" title="vim的一些操作"></a>vim的一些操作</h3><p><code>ctrl + v</code>为选择，<br><code>x</code> , <code>d</code> 为删除<br>撤销undo为 <code>u</code><br><code>:xx</code> 为有冒号操作， <code>xx</code> 没有冒号<br>删除一行 <code>dd</code> / <code>:1d</code>， 删除多行 <code>:1,3d</code><br>复制操作：<br>1.将光标移动到要复制的文本开始的地方，按 v 进入可视模式。<br>2.将光标移动到要复制的文本的结束的地方，按y复制。  此时vim会自动将光标定位到选中文本的开始的地方，并退出可视模式。<br>3.我移动光标到文本结束的地方，按 p 粘贴。</p>
 
       
     </div>
@@ -338,8 +334,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/28/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2018/06/28/tutorial/" rel="next" title="hexo教程">
+                <i class="fa fa-chevron-left"></i> hexo教程
               </a>
             
           </div>
@@ -347,10 +343,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/28/tutorial/" rel="prev" title="hexo教程">
-                hexo教程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -473,7 +465,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Multiprocess-and-Subprocess"><span class="nav-number">1.</span> <span class="nav-text">Multiprocess and Subprocess</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mlutiprocess-and-threading"><span class="nav-number">2.</span> <span class="nav-text">Mlutiprocess and threading</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#导出入python-requirements-txt文件"><span class="nav-number">1.</span> <span class="nav-text">导出入python requirements.txt文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linux-命令"><span class="nav-number">2.</span> <span class="nav-text">Linux 命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vim的一些操作"><span class="nav-number">3.</span> <span class="nav-text">vim的一些操作</span></a></li></ol></div>
             
 
           </div>
