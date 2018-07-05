@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="mess," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="description" content="总结 涉及版权等问题需要许可，要注意 unit test十分重要，对代码维护和版本兼容 License 代码风格保持以及代码风格维护工具  GuidelinesCode of Conduct签署CLA协议（github中）检查修改是否和guidelines一致检查编码风格是否一致能否运行单元检测（Unit Tests） Contributor License Agreements如果是个人写代码，">
+<meta name="keywords" content="mess">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://transcendentsky.github.com/2018/06/28/hello-world/index.html">
+<meta property="og:title" content="开源项目注意事项 \n（Contribution Guidelines of TF）">
+<meta property="og:url" content="http://transcendentsky.github.com/2018/07/05/Contribution-Guidelines-of-TF/index.html">
 <meta property="og:site_name" content="人不能两次踏进同一条河流">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="总结 涉及版权等问题需要许可，要注意 unit test十分重要，对代码维护和版本兼容 License 代码风格保持以及代码风格维护工具  GuidelinesCode of Conduct签署CLA协议（github中）检查修改是否和guidelines一致检查编码风格是否一致能否运行单元检测（Unit Tests） Contributor License Agreements如果是个人写代码，">
 <meta property="og:locale" content="cn/en/jp">
-<meta property="og:updated_time" content="2018-06-28T10:28:28.852Z">
+<meta property="og:updated_time" content="2018-07-05T13:05:50.928Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="开源项目注意事项 \n（Contribution Guidelines of TF）">
+<meta name="twitter:description" content="总结 涉及版权等问题需要许可，要注意 unit test十分重要，对代码维护和版本兼容 License 代码风格保持以及代码风格维护工具  GuidelinesCode of Conduct签署CLA协议（github中）检查修改是否和guidelines一致检查编码风格是否一致能否运行单元检测（Unit Tests） Contributor License Agreements如果是个人写代码，">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://transcendentsky.github.com/2018/06/28/hello-world/"/>
+  <link rel="canonical" href="http://transcendentsky.github.com/2018/07/05/Contribution-Guidelines-of-TF/"/>
 
 
 
 
 
-  <title>Hello World | 人不能两次踏进同一条河流</title>
+  <title>开源项目注意事项 \n（Contribution Guidelines of TF） | 人不能两次踏进同一条河流</title>
   
 
 
@@ -252,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://transcendentsky.github.com/2018/06/28/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://transcendentsky.github.com/2018/07/05/Contribution-Guidelines-of-TF/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="全意">
@@ -269,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hello World</h1>
+          <h1 class="post-title" itemprop="name headline">开源项目注意事项 \n（Contribution Guidelines of TF）</h1>
         
 
         <div class="post-meta">
@@ -281,8 +282,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-28T18:28:28+08:00">
-                2018-06-28
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-05T19:33:49+08:00">
+                2018-07-05
               </time>
             
 
@@ -300,9 +301,9 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/06/28/hello-world/#comments" itemprop="discussionUrl">
+                <a href="/2018/07/05/Contribution-Guidelines-of-TF/#comments" itemprop="discussionUrl">
                   <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2018/06/28/hello-world/" itemprop="commentCount"></span>
+                        data-disqus-identifier="2018/07/05/Contribution-Guidelines-of-TF/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -330,16 +331,26 @@
       
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
+        <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><ul>
+<li>涉及版权等问题需要许可，要注意</li>
+<li>unit test十分重要，对代码维护和版本兼容</li>
+<li>License</li>
+<li>代码风格保持以及代码风格维护工具</li>
+</ul>
+<p>Guidelines<br>Code of Conduct<br>签署CLA协议（github中）<br>检查修改是否和guidelines一致<br>检查编码风格是否一致<br>能否运行单元检测（Unit Tests）</p>
+<h3 id="Contributor-License-Agreements"><a href="#Contributor-License-Agreements" class="headerlink" title="Contributor License Agreements"></a>Contributor License Agreements</h3><p>如果是个人写代码，请确保你拥有这个知识产权，并签署个人CLA协议<br>如果你是员工，你需要签署公司CLA协议<br>签署协议后我们才能接受你的pull request</p>
+<h3 id="Contributing-Code"><a href="#Contributing-Code" class="headerlink" title="Contributing Code"></a>Contributing Code</h3><p>你贡献的代码不会第一时间放到主代码中，看情况会作为patch发布<br>如果你想贡献却没有方向， 你可以看xxx ，</p>
+<h3 id="Contribution-guidelines-and-Standards"><a href="#Contribution-guidelines-and-Standards" class="headerlink" title="Contribution guidelines and Standards"></a>Contribution guidelines and Standards</h3><p>Guidelines</p>
+<ul>
+<li>贡献新特性确保有一个unit test，保证其正确性以及以后代码的兼容性</li>
+<li>修复bugs也要有unit test，</li>
+<li>请保持API的兼容性</li>
+<li>当你贡献新特性后，维护工作会交给tf团队，这意味着其作用需要大于维护成本</li>
+</ul>
+<p>License：<br>新文件 顶部需要有 license</p>
+<p>Python 代码风格：<br>使用pylint确认你的代码 （c/c++ 使用 clang-tidy）</p>
+<p>运行unit tests。。。。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># Copyright 2015 The TensorFlow Authors. All Rights Reserved.</span><br><span class="line">#</span><br><span class="line"># Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span><br><span class="line"># you may not use this file except in compliance with the License.</span><br><span class="line"># You may obtain a copy of the License at</span><br><span class="line">#</span><br><span class="line">#     http://www.apache.org/licenses/LICENSE-2.0</span><br><span class="line">#</span><br><span class="line"># Unless required by applicable law or agreed to in writing, software</span><br><span class="line"># distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span><br><span class="line"># WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span><br><span class="line"># See the License for the specific language governing permissions and</span><br><span class="line"># limitations under the License.</span><br><span class="line"># =============================================================================</span><br><span class="line">位于代码顶部</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -354,6 +365,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/mess/" rel="tag"># mess</a>
+          
+        </div>
+      
 
       
       
@@ -363,15 +380,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/07/04/mess0000002/" rel="next" title="分配正义">
+                <i class="fa fa-chevron-left"></i> 分配正义
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/28/test/" rel="prev" title="【Python】Multiprocess and Subprocess and threading">
-                【Python】Multiprocess and Subprocess and threading <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -529,7 +546,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">1.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Contributor-License-Agreements"><span class="nav-number">2.</span> <span class="nav-text">Contributor License Agreements</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Contributing-Code"><span class="nav-number">3.</span> <span class="nav-text">Contributing Code</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Contribution-guidelines-and-Standards"><span class="nav-number">4.</span> <span class="nav-text">Contribution guidelines and Standards</span></a></li></ol></div>
             
 
           </div>
@@ -699,9 +716,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://transcendentsky.github.com/2018/06/28/hello-world/';
-          this.page.identifier = '2018/06/28/hello-world/';
-          this.page.title = 'Hello World';
+          this.page.url = 'http://transcendentsky.github.com/2018/07/05/Contribution-Guidelines-of-TF/';
+          this.page.identifier = '2018/07/05/Contribution-Guidelines-of-TF/';
+          this.page.title = '开源项目注意事项 \\n（Contribution Guidelines of TF）';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://transcendentsky.disqus.com/embed.js';
