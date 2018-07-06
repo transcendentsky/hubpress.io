@@ -335,7 +335,8 @@
         
           
             <p>If it is asking you for a username and password, your origin remote is pointing at the https url rather than the ssh url.</p>
-<p>Change it to ssh.<br>For example, a github project like Git will have https url<br><code>https://github.com/&lt;Username&gt;/&lt;Project&gt;.git</code><br>and the ssh one:<br><a href="mailto:`git@github.com" target="_blank" rel="noopener">`git@github.com</a>:<username>/<project>.git<code>You can do:</code>git remote set-url origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:<username>/<project>.git`</project></username></project></username></p>
+<p>Change it to ssh.<br>For example, a github project like Git will have https url<br><code>https://github.com/&lt;Username&gt;/&lt;Project&gt;.git</code><br>and the ssh one:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git@github.com:&lt;Username&gt;/&lt;Project&gt;.git</span><br></pre></td></tr></table></figure></p>
+<p>You can do:<br><code>git remote set-url origin git@github.com:&lt;Username&gt;/&lt;Project&gt;.git</code></p>
 
           
         
